@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion as Motion } from "framer-motion";
 
 export default function About() {
   return (
@@ -15,7 +15,7 @@ export default function About() {
           </span>
         </div>
 
-        <motion.div
+        <Motion.div
           initial="hidden"
           animate="visible"
           variants={{
@@ -26,27 +26,27 @@ export default function About() {
           aria-label="PRAKHAR BANSAL"
         >
           {"PRAKHAR".split("").map((ch, i) => (
-            <motion.span
+            <Motion.span
               key={`f-${i}-${ch}`}
               className="inline-block bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-500"
               variants={{ hidden: { y: 30, opacity: 0 }, visible: { y: 0, opacity: 1 } }}
               transition={{ type: "spring", stiffness: 300, damping: 20 }}
             >
               {ch}
-            </motion.span>
+            </Motion.span>
           ))}
           <br />
           {"BANSAL".split("").map((ch, i) => (
-            <motion.span
+            <Motion.span
               key={`l-${i}-${ch}`}
               className="inline-block bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-purple-400"
               variants={{ hidden: { y: 30, opacity: 0 }, visible: { y: 0, opacity: 1 } }}
               transition={{ type: "spring", stiffness: 300, damping: 20 }}
             >
               {ch}
-            </motion.span>
+            </Motion.span>
           ))}
-        </motion.div>
+        </Motion.div>
 
         <p className="text-5xl  text-gray-400 mt-6">
           Frontend & Backend (Full-Stack) <br/> Developer.

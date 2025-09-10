@@ -92,7 +92,7 @@ export default function ContactSayHi() {
   ];
 
   return (
-    <div id="contact" className="min-h-screen flex items-center justify-center p-8">
+  <div id="contact" className="min-h-screen flex items-center justify-center px-2 py-6 sm:px-8">
       <MotionMain
         variants={containerVariants}
         initial="hidden"
@@ -100,31 +100,31 @@ export default function ContactSayHi() {
         className="w-full max-w-4xl"
       >
         {/* Header */}
-        <MotionSection variants={itemVariants} className="text-center mb-16">
-          <div className="flex items-center justify-center gap-4">
-            <span className="text-6xl animate-wave">👋</span>
+        <MotionSection variants={itemVariants} className="text-center mb-10 sm:mb-16 px-2">
+          <div className="flex items-center justify-center gap-2 sm:gap-4">
+            <span className="text-4xl xs:text-5xl sm:text-6xl animate-wave">👋</span>
           </div>
-          <h1 className="mt-4 text-5xl md:text-6xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-500">
+          <h1 className="mt-2 text-3xl xs:text-4xl sm:text-5xl md:text-6xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-500">
             Let's build something great
           </h1>
-          <p className="text-gray-400 mt-4 text-lg">
+          <p className="text-gray-400 mt-2 sm:mt-4 text-base xs:text-lg">
             I help teams ship fast with clean UI and robust systems.
           </p>
-          <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
-            <a href="mailto:prakhar@example.com" className="px-6 py-3 rounded-full bg-white text-black font-semibold hover:bg-gray-200 transition w-full sm:w-auto text-center">Email me</a>
-            <a href="https://drive.google.com/file/d/1g0Ebo_iv-yDZJH3EF7W4sb8Mo3dxEzr9/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="px-6 py-3 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold hover:from-purple-500 hover:to-pink-500 transition w-full sm:w-auto text-center">View resume</a>
+          <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 w-full">
+            <a href="mailto:prakhar@example.com" className="px-4 py-2 sm:px-6 sm:py-3 rounded-full bg-white text-black font-semibold hover:bg-gray-200 transition w-full sm:w-auto text-center">Email me</a>
+            <a href="https://drive.google.com/file/d/1g0Ebo_iv-yDZJH3EF7W4sb8Mo3dxEzr9/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="px-4 py-2 sm:px-6 sm:py-3 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold hover:from-purple-500 hover:to-pink-500 transition w-full sm:w-auto text-center">View resume</a>
           </div>
         </MotionSection>
         {/* Contact Form */}
         <MotionSection
           variants={itemVariants}
           id="contact-form"
-          className="w-full max-w-2xl mx-auto p-8 bg-white/5 border border-white/10 rounded-2xl backdrop-blur-xl glow-ring"
+          className="w-full max-w-2xl mx-auto px-2 py-6 sm:p-8 bg-white/5 border border-white/10 rounded-2xl backdrop-blur-xl glow-ring"
         >
-          <h2 className="text-3xl font-bold mb-4 text-center bg-clip-text text-transparent bg-gradient-to-tr from-purple-400 to-pink-500">
+          <h2 className="text-2xl xs:text-3xl font-bold mb-2 sm:mb-4 text-center bg-clip-text text-transparent bg-gradient-to-tr from-purple-400 to-pink-500">
             Let’s work together 🚀
           </h2>
-          <form ref={formRef} onSubmit={handleSubmit} className="flex flex-col gap-8 mt-8">
+          <form ref={formRef} onSubmit={handleSubmit} className="flex flex-col gap-6 sm:gap-8 mt-4 sm:mt-8">
             <InputField
               id="name"
               type="text"
@@ -152,7 +152,7 @@ export default function ContactSayHi() {
                 onChange={handleChange}
                 required
                 rows={4}
-                className="peer w-full bg-transparent border-b-2 border-gray-500 text-white placeholder-transparent focus:outline-none focus:border-cyan-400 transition-colors resize-none px-0"
+                className="peer w-full bg-transparent border-b-2 border-gray-500 text-white placeholder-transparent focus:outline-none focus:border-cyan-400 transition-colors resize-none px-0 min-h-[80px] xs:min-h-[100px]"
               />
               <label
                 htmlFor="message"
@@ -168,7 +168,7 @@ export default function ContactSayHi() {
               whileTap={{ scale: 0.97 }}
               type="submit"
               disabled={submitted}
-              className="w-full py-4 rounded-full text-lg font-semibold bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 transition-all duration-300 disabled:opacity-60 disabled:cursor-not-allowed ring-1 ring-white/15 hover:ring-white/35 focus:outline-none focus:ring-2 focus:ring-pink-400/60 shadow-none"
+              className="w-full py-3 xs:py-4 rounded-full text-base xs:text-lg font-semibold bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 transition-all duration-300 disabled:opacity-60 disabled:cursor-not-allowed ring-1 ring-white/15 hover:ring-white/35 focus:outline-none focus:ring-2 focus:ring-pink-400/60 shadow-none"
             >
               {submitted ? "Message Sent! 🎉" : "Send Message"}
             </MotionButton>
@@ -179,16 +179,16 @@ export default function ContactSayHi() {
           {error && (
             <div className="text-red-400 mt-4 text-center">{error}</div>
           )}
-          <div className="flex gap-8 justify-center mt-10 mb-4">
+          <div className="flex flex-wrap gap-4 xs:gap-6 justify-center mt-8 sm:mt-10 mb-2 sm:mb-4">
             {socialLinks.map((link, idx) => (
-              <div key={idx} className="p-3 rounded-full bg-white/5 hover:bg-white/10 transition glow-ring">
+              <div key={idx} className="p-2 xs:p-3 rounded-full bg-white/5 hover:bg-white/10 transition glow-ring">
                 <SocialIcon {...link} />
               </div>
             ))}
           </div>
         </MotionSection>
         {/* Footer */}
-        <motion.footer variants={itemVariants} className="text-center text-gray-400 py-8 mt-16 text-sm">
+        <motion.footer variants={itemVariants} className="text-center text-gray-400 py-6 sm:py-8 mt-10 sm:mt-16 text-xs xs:text-sm">
           <p>&copy; {new Date().getFullYear()} Prakhar Bansal. Crafted with passion.</p>
         </motion.footer>
       </MotionMain>

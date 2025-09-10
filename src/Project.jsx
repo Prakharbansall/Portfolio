@@ -91,15 +91,15 @@ export default function ProjectCard() {
   };
 
   return (
-    <div id="projects" className="space-y-16 px-4 md:px-0">
-      <h2 className="text-center text-5xl font-extrabold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-500">
+    <div id="projects" className="space-y-12 sm:space-y-14 md:space-y-16 px-3 sm:px-4 md:px-0">
+      <h2 className="text-center text-3xl sm:text-4xl md:text-5xl font-extrabold mb-4 sm:mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-500">
         Projects
       </h2>
       {projects.map((project, index) => (
         // Step 3: Wrap the motion.div with the Tilt component
         <Tilt key={index} options={tiltOptions}>
           <motion.div
-            className="relative w-full max-w-5xl mx-auto border border-purple-900/40 bg-gradient-to-br from-gray-900/80 to-black/80 text-white p-10 rounded-2xl 
+            className="relative w-full max-w-5xl mx-auto border border-purple-900/40 bg-gradient-to-br from-gray-900/80 to-black/80 text-white p-6 sm:p-8 md:p-10 rounded-2xl 
             shadow-[0_12px_40px_rgba(139,92,246,0.25)] hover:shadow-[0_18px_60px_rgba(219,39,119,0.25)] backdrop-blur-xl
             transition-all duration-300 ease-in-out hover:border-purple-500/50"
             variants={cardVariants}
