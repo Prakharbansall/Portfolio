@@ -67,7 +67,7 @@ export default function Nav() {
           {/* Logo */}
           <h1 className="text-white font-bold text-2xl tracking-wide">
             <a
-              href="https://portfolio-six-nu-1m4k6n5fqw.vercel.app/"
+              href="https://portfolio-xi-gules-z35l4vhvla.vercel.app/"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-blue-400 transition-colors cursor-pointer"
