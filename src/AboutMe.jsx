@@ -2,7 +2,7 @@ import PrakharImg from "../Images/Prakhar.JPG";
 
 export default function AboutMe() {
     return (
-        <div id="about" className="text-white min-h-[85vh] flex items-center justify-center px-4 py-8">
+        <div id="about-me" className="text-white min-h-[85vh] flex items-center justify-center px-4 py-8">
             <div className="max-w-6xl w-full flex flex-col md:flex-row items-center gap-10">
                 
                 {/* Left side - Text */}

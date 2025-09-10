@@ -118,7 +118,7 @@ export default function ContactSayHi() {
         {/* Contact Form */}
         <MotionSection
           variants={itemVariants}
-          id="contact"
+          id="contact-form"
           className="w-full max-w-2xl mx-auto p-8 bg-white/5 border border-white/10 rounded-2xl backdrop-blur-xl glow-ring"
         >
           <h2 className="text-3xl font-bold mb-4 text-center bg-clip-text text-transparent bg-gradient-to-tr from-purple-400 to-pink-500">

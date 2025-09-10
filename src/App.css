@@ -1,8 +1,5 @@
-<<<<<<< HEAD
 @import "tailwindcss";
 
-=======
->>>>>>> 02db0566dfa5da8a10d6b983f4e0cbc2f709dcb4
 /* --- Page Setup & Reusable Classes --- */
 :root {
   /* New Color Palette */
@@ -68,6 +65,3 @@ body {
 section, div[id] {
   scroll-margin-top: calc(var(--nav-height) + 10px);
 }
-
-
-
