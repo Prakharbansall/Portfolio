@@ -65,6 +65,7 @@ export default function Nav() {
       <nav className="fixed top-0 left-0 w-full h-16 bg-[rgba(0, 0, 0, 0.65)] backdrop-blur-md z-[3000] px-15 py-15 p-9">
         <div className="flex justify-between items-center max-w-[1400px] mx-auto w-full px-6">
           {/* Logo */}
+<<<<<<< HEAD
           <h1 className="text-white font-bold text-2xl tracking-wide">
             <a
               href="https://portfolio-six-nu-1m4k6n5fqw.vercel.app/"
@@ -75,6 +76,10 @@ export default function Nav() {
             >
               PRAKHAR BANSAL
             </a>
+=======
+          <h1 className="text-white font-bold text-2xl tracking-wide cursor-pointer hover:text-blue-400 transition-colors">
+            PRAKHAR BANSAL
+>>>>>>> 02db0566dfa5da8a10d6b983f4e0cbc2f709dcb4
           </h1>
 
           {/* Desktop Links */}
@@ -101,16 +106,28 @@ export default function Nav() {
           <button
             className="md:hidden ml-auto text-white"
             onClick={toggleMenu}
+<<<<<<< HEAD
             aria-label={isOpen ? "Close menu" : "Open menu"}
             aria-expanded={isOpen}
           >
             {isOpen ? <CloseIcon /> : <MenuIcon />}
+=======
+            aria-label="Open menu"
+            aria-expanded={isOpen}
+          >
+            <MenuIcon />
+>>>>>>> 02db0566dfa5da8a10d6b983f4e0cbc2f709dcb4
           </button>
         </div>
       </nav>
 
+<<<<<<< HEAD
       {/* Progress Bar (separate from nav, old effect) */}
       <div className="fixed top-[120px] left-0 right-0 mx-auto h-[1px] bg-white/20 z-[3001] max-w-[1800px] w-[90%]">
+=======
+      {/* Progress Bar */}
+      <div className="fixed top-[73px] left-0 right-0 mx-auto w-[85%] h-[1px] bg-white/20 z-[1001] ">
+>>>>>>> 02db0566dfa5da8a10d6b983f4e0cbc2f709dcb4
         <div
           className="h-full bg-white transition-all duration-100 ease-out"
           style={{ width: `${scrollPercentage}%` }}
@@ -120,6 +137,7 @@ export default function Nav() {
       {/* Overlay Menu */}
       <div
         className={`fixed inset-0 flex justify-center items-center bg-[rgba(18,18,18,0.85)] backdrop-blur-md z-[2000] transition-opacity duration-300 ${
+<<<<<<< HEAD
           isOpen ? "opacity-100 visible" : "opacity-0 pointer-events-none"
         }`}
         aria-hidden={!isOpen}
@@ -132,6 +150,19 @@ export default function Nav() {
           aria-expanded={isOpen}
         >
           <CloseIcon />
+=======
+          isOpen ? "opacity-100 visible" : "opacity-0 invisible"
+        }`}
+      >
+        {/* Close Button */}
+        <button
+          className="absolute top-6 right-[5vw] text-white"
+          onClick={toggleMenu}
+          aria-label={isOpen ? "Close menu" : "Open menu"}
+          aria-expanded={isOpen}
+        >
+          {isOpen ? <CloseIcon /> : <MenuIcon />}
+>>>>>>> 02db0566dfa5da8a10d6b983f4e0cbc2f709dcb4
         </button>
 
         {/* Mobile Links */}

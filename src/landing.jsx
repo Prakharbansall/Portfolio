@@ -22,7 +22,11 @@ export default function About() {
             hidden: { opacity: 0 },
             visible: { opacity: 1, transition: { staggerChildren: 0.06 } },
           }}
+<<<<<<< HEAD
           className="text-6xl sm:text-7xl md:text-[150px] font-extrabold leading-tight"
+=======
+          className="text-[150px] font-extrabold leading-tight"
+>>>>>>> 02db0566dfa5da8a10d6b983f4e0cbc2f709dcb4
           aria-label="PRAKHAR BANSAL"
         >
           {"PRAKHAR".split("").map((ch, i) => (
