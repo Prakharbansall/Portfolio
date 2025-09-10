@@ -65,8 +65,16 @@ export default function Nav() {
       <nav className="fixed top-0 left-0 w-full h-16 bg-[rgba(0, 0, 0, 0.65)] backdrop-blur-md z-[3000] px-15 py-15 p-9">
         <div className="flex justify-between items-center max-w-[1400px] mx-auto w-full px-6">
           {/* Logo */}
-          <h1 className="text-white font-bold text-2xl tracking-wide cursor-pointer hover:text-blue-400 transition-colors">
-            PRAKHAR BANSAL
+          <h1 className="text-white font-bold text-2xl tracking-wide">
+            <a
+              href="https://portfolio-six-nu-1m4k6n5fqw.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-blue-400 transition-colors cursor-pointer"
+              aria-label="Open external portfolio"
+            >
+              PRAKHAR BANSAL
+            </a>
           </h1>
 
           {/* Desktop Links */}
@@ -93,16 +101,16 @@ export default function Nav() {
           <button
             className="md:hidden ml-auto text-white"
             onClick={toggleMenu}
-            aria-label="Open menu"
+            aria-label={isOpen ? "Close menu" : "Open menu"}
             aria-expanded={isOpen}
           >
-            <MenuIcon />
+            {isOpen ? <CloseIcon /> : <MenuIcon />}
           </button>
         </div>
       </nav>
 
-      {/* Progress Bar */}
-      <div className="fixed top-[73px] left-0 right-0 mx-auto w-[85%] h-[1px] bg-white/20 z-[1001] ">
+      {/* Progress Bar (separate from nav, old effect) */}
+      <div className="fixed top-[120px] left-0 right-0 mx-auto h-[1px] bg-white/20 z-[3001] max-w-[1800px] w-[90%]">
         <div
           className="h-full bg-white transition-all duration-100 ease-out"
           style={{ width: `${scrollPercentage}%` }}
@@ -112,17 +120,18 @@ export default function Nav() {
       {/* Overlay Menu */}
       <div
         className={`fixed inset-0 flex justify-center items-center bg-[rgba(18,18,18,0.85)] backdrop-blur-md z-[2000] transition-opacity duration-300 ${
-          isOpen ? "opacity-100 visible" : "opacity-0 invisible"
+          isOpen ? "opacity-100 visible" : "opacity-0 pointer-events-none"
         }`}
+        aria-hidden={!isOpen}
       >
-        {/* Close Button */}
+        {/* Close Button (redundant with navbar button); keep for accessibility on smaller screens */}
         <button
-          className="absolute top-6 right-[5vw] text-white"
+          className="absolute top-6 right-[5vw] text-white md:hidden"
           onClick={toggleMenu}
-          aria-label={isOpen ? "Close menu" : "Open menu"}
+          aria-label="Close menu"
           aria-expanded={isOpen}
         >
-          {isOpen ? <CloseIcon /> : <MenuIcon />}
+          <CloseIcon />
         </button>
 
         {/* Mobile Links */}
