@@ -91,7 +91,7 @@ export default function ProjectCard() {
   };
 
   return (
-    <div id="projects" className="space-y-12 sm:space-y-14 md:space-y-16 px-3 sm:px-4 md:px-0">
+  <div id="projects" className="space-y-10 sm:space-y-14 md:space-y-16 px-2 sm:px-4 md:px-0 mt-8 sm:mt-10">
       <h2 className="text-center text-3xl sm:text-4xl md:text-5xl font-extrabold mb-4 sm:mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-500">
         Projects
       </h2>

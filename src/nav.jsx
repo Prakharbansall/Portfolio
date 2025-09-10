@@ -62,8 +62,8 @@ export default function Nav() {
   return (
     <>
       {/* NAVBAR */}
-      <nav className="fixed top-0 left-0 w-full h-16 bg-[rgba(0, 0, 0, 0.65)] backdrop-blur-md z-[3000] px-15 py-15 p-9">
-        <div className="flex justify-between items-center max-w-[1400px] mx-auto w-full px-6">
+      <nav className="fixed top-0 left-0 w-full h-16 bg-[rgba(0, 0, 0, 0.65)] backdrop-blur-md z-[3000] px-2 sm:px-6 py-2 sm:py-4">
+        <div className="flex justify-between items-center max-w-[1400px] mx-auto w-full px-2 sm:px-6">
           {/* Logo */}
           <h1 className="text-white font-bold text-2xl tracking-wide">
             <a
@@ -78,7 +78,7 @@ export default function Nav() {
           </h1>
 
           {/* Desktop Links */}
-          <ul className="hidden md:flex gap-9 ml-auto">
+          <ul className="hidden md:flex gap-6 lg:gap-9 ml-auto">
             {[
               { label: "About", href: "#about-me" },
               { label: "Projects", href: "#projects" },
@@ -99,7 +99,7 @@ export default function Nav() {
 
           {/* Hamburger (mobile only) */}
           <button
-            className="md:hidden ml-auto text-white"
+            className="md:hidden ml-auto text-white p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
             onClick={toggleMenu}
             aria-label={isOpen ? "Close menu" : "Open menu"}
             aria-expanded={isOpen}
@@ -109,8 +109,8 @@ export default function Nav() {
         </div>
       </nav>
 
-      {/* Progress Bar (separate from nav, old effect) */}
-      <div className="fixed top-[88px] md:top-[120px] left-0 right-0 mx-auto h-[1px] bg-white/20 z-[3001] max-w-[1800px] w-[92%] md:w-[90%]">
+      {/* Progress Bar (aligned with navbar bottom) */}
+      <div className="fixed left-0 right-0 mx-auto h-[1px] bg-white/20 z-[3001] max-w-[1800px] w-[98%] sm:w-[92%] md:w-[90%]" style={{ top: '4rem' }}>
         <div
           className="h-full bg-white transition-all duration-100 ease-out"
           style={{ width: `${scrollPercentage}%` }}
@@ -126,7 +126,7 @@ export default function Nav() {
       >
         {/* Close Button (redundant with navbar button); keep for accessibility on smaller screens */}
         <button
-          className="absolute top-6 right-[5vw] text-white md:hidden"
+          className="absolute top-4 right-4 sm:top-6 sm:right-[5vw] text-white md:hidden p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
           onClick={toggleMenu}
           aria-label="Close menu"
           aria-expanded={isOpen}
@@ -135,7 +135,7 @@ export default function Nav() {
         </button>
 
         {/* Mobile Links */}
-        <ul className="text-center space-y-9">
+        <ul className="text-center space-y-6 sm:space-y-9 px-4">
           {[
             { label: "About", href: "#about-me" },
             { label: "Projects", href: "#projects" },
@@ -146,7 +146,7 @@ export default function Nav() {
               <a
                 href={link.href}
                 onClick={toggleMenu}
-                className="text-white text-3xl font-semibold hover:text-blue-400 transition-colors"
+                className="text-white text-2xl sm:text-3xl font-semibold hover:text-blue-400 transition-colors block py-2"
               >
                 {link.label}
               </a>

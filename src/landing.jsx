@@ -3,7 +3,7 @@ import { motion as Motion } from "framer-motion";
 export default function About() {
   return (
     <>
-      <div id="hero" className="min-h-screen flex flex-col items-center mt-[95px] text-white text-center px-4">
+  <div id="hero" className="flex flex-col items-center mt-8 sm:mt-[95px] text-white text-center px-2 sm:px-4">
         {/* Current role */}
         <div className="flex items-center space-x-2 mb-6">
         <div className="relative">
@@ -48,12 +48,12 @@ export default function About() {
           ))}
         </Motion.div>
 
-        <p className="text-5xl  text-gray-400 mt-6">
+  <p className="text-2xl sm:text-5xl text-gray-400 mt-2 sm:mt-6">
           Frontend & Backend (Full-Stack) <br/> Developer.
         </p>
 
         {/* Button */}
-        <a href="#contact" className="mt-8 px-8 py-3 rounded-full bg-white text-black font-semibold hover:bg-gray-200 transition">
+  <a href="#contact" className="mt-4 sm:mt-8 px-4 sm:px-8 py-2 sm:py-3 rounded-full bg-white text-black font-semibold hover:bg-gray-200 transition">
           Get in touch
         </a>
 
