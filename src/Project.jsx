@@ -99,13 +99,16 @@ export default function ProjectCard() {
         // Step 3: Wrap the motion.div with the Tilt component
         <Tilt key={index} options={tiltOptions}>
           <motion.div
-            className="relative w-full max-w-5xl mx-auto border border-purple-900/40 bg-gradient-to-br from-gray-900/80 to-black/80 text-white p-6 sm:p-8 md:p-10 rounded-2xl 
-            shadow-[0_12px_40px_rgba(139,92,246,0.25)] hover:shadow-[0_18px_60px_rgba(219,39,119,0.25)] backdrop-blur-xl
-            transition-all duration-300 ease-in-out hover:border-purple-500/50"
+            className="relative w-full max-w-5xl mx-auto border border-purple-900/40 bg-gradient-to-br from-gray-900/80 to-black/80 text-white p-6 sm:p-8 md:p-10 rounded-2xl shadow-[0_12px_40px_rgba(139,92,246,0.25)] backdrop-blur-xl"
             variants={cardVariants}
             initial="initial"
             whileInView="animate"
             viewport={{ once: true, amount: 0.2 }}
+            whileHover={{
+              boxShadow: "0 18px 60px rgba(219,39,119,0.25)",
+              borderColor: "#a855f7"
+            }}
+            transition={{ duration: 0.4, ease: "easeInOut" }}
           >
             {/* The inner content of the card remains the same */}
             <div className="flex justify-between items-start mb-4">
@@ -124,7 +127,6 @@ export default function ProjectCard() {
                 </a>
               </div>
             </div>
-            
             <div className="space-y-6">
               <div>
                 <h3 className="flex items-center text-xl font-semibold mb-2 text-gray-200">
@@ -132,7 +134,6 @@ export default function ProjectCard() {
                 </h3>
                 <p className="text-gray-300 leading-relaxed text-lg">{project.overview}</p>
               </div>
-              
               <div>
                 <h3 className="flex items-center text-xl font-semibold mb-2 text-gray-200">
                   <FaRocket className="mr-2 text-purple-400" /> Key Features
@@ -143,7 +144,6 @@ export default function ProjectCard() {
                   ))}
                 </ul>
               </div>
-              
               <div>
                 <h3 className="flex items-center text-xl font-semibold mb-3 text-gray-200">
                   <FaTools className="mr-2 text-purple-400" /> Technologies Used

@@ -12,8 +12,8 @@ function SocialIcon(props) {
       target="_blank"
       rel="noopener noreferrer"
       whileHover={{ scale: 1.15, rotate: 6 }}
-      whileTap={{ scale: 0.95 }}
-      transition={{ type: "spring", stiffness: 360, damping: 15 }}
+  whileTap={{ scale: 0.95 }}
+  transition={{ type: "tween", duration: 0.4, ease: "easeInOut" }}
       className="text-gray-400 hover:text-cyan-400 focus:text-cyan-400 outline-none"
       aria-label={url}
     >
