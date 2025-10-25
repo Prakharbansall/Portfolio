@@ -20,7 +20,7 @@ export default function AboutMe() {
                     <img 
                         src={PrakharImg}
                         alt="Prakhar" 
-                        className="w-40 h-40 xs:w-52 xs:h-52 sm:w-64 sm:h-64 md:w-80 md:h-80 max-w-full object-cover rounded-xl shadow-[0_10px_40px_rgba(168,85,247,0.45)] ring-1 ring-purple-600/30"
+                        className="w-45 h-45 xs:w-52 xs:h-52 sm:w-64 sm:h-64 md:w-80 md:h-80 max-w-full rounded-xl shadow-[0_10px_40px_rgba(168,85,247,0.45)] ring-1 ring-purple-600/30"
                     />
                 </div>
             </div>
