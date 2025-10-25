@@ -1,15 +1,20 @@
 import { motion as Motion } from "framer-motion";
+import React from "react";
+import TechStack from "./techstac";
 
 export default function About() {
   return (
     <>
-  <div id="hero" className="flex flex-col items-center mt-8 sm:mt-[95px] text-white text-center px-2 sm:px-4">
+      <div
+        id="hero"
+        className="flex flex-col items-center mt-8 sm:mt-[95px] text-white text-center px-2 sm:px-4"
+      >
         {/* Current role */}
         <div className="flex items-center space-x-2 mb-6">
-        <div className="relative">
-              <span className="absolute inline-flex h-3 w-3 rounded-full bg-green-500 opacity-88 animate-ping"></span>
-              <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
-        </div>
+          <div className="relative">
+            <span className="absolute inline-flex h-3 w-3 rounded-full bg-green-500 opacity-88 animate-ping"></span>
+            <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+          </div>
           <span className="text-xl tracking-widest text-gray-200">
             Available For Work
           </span>
@@ -29,7 +34,10 @@ export default function About() {
             <Motion.span
               key={`f-${i}-${ch}`}
               className="inline-block bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-500"
-              variants={{ hidden: { y: 30, opacity: 0 }, visible: { y: 0, opacity: 1 } }}
+              variants={{
+                hidden: { y: 30, opacity: 0 },
+                visible: { y: 0, opacity: 1 },
+              }}
               transition={{ type: "spring", stiffness: 300, damping: 20 }}
             >
               {ch}
@@ -40,7 +48,10 @@ export default function About() {
             <Motion.span
               key={`l-${i}-${ch}`}
               className="inline-block bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-purple-400"
-              variants={{ hidden: { y: 30, opacity: 0 }, visible: { y: 0, opacity: 1 } }}
+              variants={{
+                hidden: { y: 30, opacity: 0 },
+                visible: { y: 0, opacity: 1 },
+              }}
               transition={{ type: "spring", stiffness: 300, damping: 20 }}
             >
               {ch}
@@ -48,17 +59,20 @@ export default function About() {
           ))}
         </Motion.div>
 
-  <p className="text-2xl sm:text-5xl text-gray-400 mt-2 sm:mt-6">
-          Frontend & Backend (Full-Stack) <br/> Developer.
+        <p className="text-2xl sm:text-5xl text-gray-400 mt-2 sm:mt-6">
+          Frontend & Backend (Full-Stack) <br /> Developer.
         </p>
 
         {/* Button */}
-  <a href="#contact" className="mt-4 sm:mt-8 px-4 sm:px-8 py-2 sm:py-3 rounded-full bg-white text-black font-semibold hover:bg-gray-200 transition">
+        <a
+          href="#contact"
+          className="mt-4 sm:mt-8 px-4 sm:px-8 py-2 sm:py-3 rounded-full bg-white text-black font-semibold hover:bg-gray-200 transition"
+        >
           Get in touch
         </a>
-
-      
-      </div>
+        <br></br>
+        <TechStack/>
+       </div>
     </>
   );
 }
