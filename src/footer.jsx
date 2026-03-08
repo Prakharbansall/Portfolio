@@ -88,7 +88,7 @@ export default function ContactSayHi() {
     { url: "https://github.com/Prakharbansall", icon: FaGithub },
     { url: "https://www.linkedin.com/in/prakhar-m03/", icon: FaLinkedin },
     { url: "https://x.com/PrakharBan16313", icon: FaTwitter },
-    { url: "https://www.instagram.com/arrey_prakhar/", icon: FaInstagram },
+    { url: "https://www.instagram.com/prakhar0_0bansal/", icon: FaInstagram },
   ];
 
   return (
@@ -111,7 +111,7 @@ export default function ContactSayHi() {
             I help teams ship fast with clean UI and robust systems.
           </p>
           <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 w-full">
-            <a href="mailto:prakhar@example.com" className="px-4 py-2 sm:px-6 sm:py-3 rounded-full bg-white text-black font-semibold hover:bg-gray-200 transition w-full sm:w-auto text-center">Email me</a>
+            <a href="mailto:prakharbansal977@gmail.com" className="px-4 py-2 sm:px-6 sm:py-3 rounded-full bg-white text-black font-semibold hover:bg-gray-200 transition w-full sm:w-auto text-center">Email me</a>
             <a href="https://drive.google.com/file/d/1g0Ebo_iv-yDZJH3EF7W4sb8Mo3dxEzr9/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="px-4 py-2 sm:px-6 sm:py-3 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold hover:from-purple-500 hover:to-pink-500 transition w-full sm:w-auto text-center">View resume</a>
           </div>
         </MotionSection>

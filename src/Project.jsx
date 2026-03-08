@@ -32,7 +32,7 @@ export default function ProjectCard() {
         "Optimized for seamless use on desktop, tablet, and mobile devices."
       ],
       technologies: ["React", "Node.js", "Express.js", "MongoDB", "CSS", "Git"],
-      liveLink: "https://book-hunt-ke4daygws-prakharbansal977-9234s-projects.vercel.app/",
+      liveLink: "https://book-hunt-beige.vercel.app/",
       sourceLink: "https://github.com/Prakharbansall/Book-Hunt",
     },
     {
